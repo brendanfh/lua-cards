@@ -1,5 +1,6 @@
 import {
     Rectangle = "src.util.rect:";
+    Mouse = "src.util.mouse";
     GameObject = "src.util.intf:GameObject";
 }
 
@@ -29,8 +30,8 @@ class "Button" [GameObject] {
     end;
 
     update = function(self, dt)
-        local mx = love.mouse.getX()
-        local my = love.mouse.getY()
+        local mx = Mouse.getX()
+        local my = Mouse.getY()
         self.selected = self.rect ^ Rectangle(mx, my, 1, 1)
 
         if self.selected and not love.mouse.isDown(1) and self.__mdTrigger then
