@@ -31,9 +31,6 @@ class "MainMenuState" [MenuState] {
     draw = function(self)
         love.graphics.clear(30, 30, 30)
         MenuState.draw(self)
-
-        love.graphics.setColor({ 0, 0, 255 })
-        love.graphics.polygon("fill", { 0, 0, 100, 100, 0, 100 })
     end;
 }
 

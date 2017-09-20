@@ -1,5 +1,5 @@
 return {
-    width = 320;
-    height = 240;
-    scale = 3;
+    width = 640;
+    height = 480;
+    scale = 1.5;
 }

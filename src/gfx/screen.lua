@@ -13,7 +13,6 @@ Screen = singleton {
 
         self.scale_x = love.graphics.getWidth() / G.width
         self.scale_y = love.graphics.getHeight() / G.height
-        print(self.scale_x, self.scale_y)
 
         self.clearColor = { 0, 0, 0 }
 
