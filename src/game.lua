@@ -9,8 +9,6 @@ import {
 
 class "Game" [GameObject] {
     init = function(self)
-        love.graphics.setDefaultFilter("nearest", "nearest", 0)
-
         FontManager:addFont(48)
         FontManager:addFont(36)
         FontManager:addFont(18)

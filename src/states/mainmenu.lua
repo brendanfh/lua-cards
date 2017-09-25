@@ -13,14 +13,14 @@ class "MainMenuState" [MenuState] {
         MenuState.init(self)
         local w, h = G.width, G.height
 
-        local title = Text(w / 2 - 200, 50, 400, "Something Amazing!", FontManager:getFont(36), {255, 0, 0})
-        local playButton = Button(w / 2 - 100, 250, 200, 48, "Play", FontManager:getFont(18))
+        local title = Text(w / 2 - w * 5 / 16, 50, w * 10 / 16, "Something Amazing!", FontManager:getFont(36), {255, 0, 0})
+        local playButton = Button(w / 2 - w * 5 / 32, 250, w * 5 / 16, h / 10, "Play", FontManager:getFont(18))
             :setOnClick(function()
                 SET_GAME_STATE(PlayState())
             end)
 
-        local optionsButton = Button(w / 2 - 100, 300, 200, 48, "Options", FontManager:getFont(18))
-        local quitButton = Button(w / 2 - 100, 350, 200, 48, "Quit", FontManager:getFont(18))
+        local optionsButton = Button(w / 2 - w * 5 / 32, 300, w * 5/ 16, h / 10, "Options", FontManager:getFont(18))
+        local quitButton = Button(w / 2 - w * 5 / 32, 350, w * 5 / 16, h / 10, "Quit", FontManager:getFont(18))
             :setOnClick(function()
                 love.event.push("quit")
             end)

@@ -4,6 +4,7 @@ import {
 
 Screen = singleton {
     init = function(self)
+        love.graphics.setDefaultFilter("nearest", "nearest", 0)
         self.viewport = {
             x = 0;
             y = 0;
@@ -13,8 +14,6 @@ Screen = singleton {
 
         self.scale_x = love.graphics.getWidth() / G.width
         self.scale_y = love.graphics.getHeight() / G.height
-
-        self.clearColor = { 0, 0, 0 }
 
         self.canvas = love.graphics.newCanvas(G.width, G.height)
         self.canvas:setFilter("nearest", "nearest", 1)
@@ -32,8 +31,6 @@ Screen = singleton {
     begin = function(self)
         love.graphics.push()
         love.graphics.setCanvas(self.canvas)
-        love.graphics.setColor(self.clearColor)
-        love.graphics.rectangle("fill", 0, 0, G.width, G.height)
         love.graphics.translate(self.viewport.x, self.viewport.y)
     end;
 
