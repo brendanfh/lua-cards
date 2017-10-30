@@ -1,6 +1,6 @@
 import {
     Rectangle = "src.util.rect:";
-    Mouse = "src.util.mouse";
+    Mouse = "src.util.input:Mouse";
     GameObject = "src.util.intf:GameObject";
 }
 

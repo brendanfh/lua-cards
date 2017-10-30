@@ -25,7 +25,7 @@ class "MainMenuState" [MenuState] {
                 love.event.push("quit")
             end)
         
-        self:addItems(title, playButton, optionsButton, quitButton, test)
+        self:addItems(title, playButton, optionsButton, quitButton)
     end;
 
     draw = function(self)
